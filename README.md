@@ -20,33 +20,29 @@ Tex-Shadow is an optimization-based framework that leverages 3D-aware diffusion 
 
 ```mermaid
 flowchart TB
-    A["📷 N-view Images\nsemantic-free"]
-
-    subgraph S1["Stage 1 — 3D Reconstruction"]
+    subgraph R1[" "]
         direction LR
-        B["LoRA Customization\nZero123++ · MVDream"]
-        C["Multi-SDS+ Loss\n+ Instant-NGP"]
-        D["Marching Cubes\nmesh extraction"]
-        B --> C --> D
+        A["📷 N-view Images\nsemantic-free"]
+        subgraph S1["Stage 1 — 3D Reconstruction"]
+            direction LR
+            B["LoRA Customization\nZero123++ · MVDream"] --> C["Multi-SDS+ Loss\n+ Instant-NGP"] --> D["Marching Cubes"]
+        end
+        A --> B
     end
 
-    subgraph S2["Stage 2 — Texture Refinement"]
+    subgraph R2[" "]
         direction LR
-        E["UV Unwrapping\nxatlas"]
-        F["Inverse Texture Opt.\nnvdiffrast · Zero123"]
-        E --> F
-    end
-
-    subgraph OUT["Output"]
-        direction LR
+        subgraph S2["Stage 2 — Texture Refinement"]
+            direction LR
+            E["UV Unwrapping\nxatlas"] --> F["Inverse Texture Opt.\nnvdiffrast · Zero123"]
+        end
         G1["🎨 Anamorphic Art"]
         G2["💡 Shadow Art"]
         G3["🧱 Voxel · Brick · Game"]
+        F --> G1 & G2 & G3
     end
 
-    A --> B
     D --> E
-    F --> G1 & G2 & G3
 ```
 
 ## Method
