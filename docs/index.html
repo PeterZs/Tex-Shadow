@@ -10,7 +10,7 @@
 
   <title>Tex-Shadow</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Google+Sans|Noto+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -52,7 +52,7 @@
         <a class="navbar-link">More Research about Bumsoo Kim</a>
         <div class="navbar-dropdown" style="left:50%; margin-left:-350px; min-width:700px">
 
-          <span class="navbar-item" style="font-weight:bold; background:#b87d1a;">Non-photorealistic (NPR) Domain</span>
+          <span class="navbar-item" style="font-weight:bold; background:#1D90A3; color:#F1EFE3;">Non-photorealistic (NPR) Domain</span>
           <div class="container is-max-desktop"><div class="columns is-centered">
             <div class="column" style="min-width:300px;">
               <a class="navbar-item" href="https://gh-bumsookim.github.io/Minecraft-ify/">&emsp;Minecraft-ify</a>
@@ -74,7 +74,7 @@
             </div>
           </div></div>
 
-          <span class="navbar-item" style="font-weight:bold; background:#1a3a5c;">Photorealistic (PR) Domain</span>
+          <span class="navbar-item" style="font-weight:bold; background:#55686e; color:#F1EFE3;">Photorealistic (PR) Domain</span>
           <div class="container is-max-desktop"><div class="columns is-centered">
             <div class="column" style="min-width:300px;">
               <a class="navbar-item" href="https://video-reaging.github.io/">&emsp;Video Face Re-Aging</a>
@@ -111,7 +111,7 @@
       <div class="has-text-centered">
 
         <h1 class="title is-2 publication-title">
-          Tex-Shadow: Synthesizing Textured 3D Shadow Art<br>via 3D-Aware Diffusion Prior
+          <span class="neon-T">T</span><span class="neon-e">e</span><span class="neon-x">x</span>-<span class="shadow-animate">Shadow</span>: Synthesizing Textured 3D Shadow Art<br>via 3D-Aware Diffusion Prior
         </h1>
 
         <div class="is-size-5 publication-authors" style="margin-top:1rem;">
@@ -121,16 +121,21 @@
           </span>
         </div>
 
-        <div class="is-size-6 publication-authors" style="margin-top:0.5rem; color:#ccccdd;">
+        <div class="is-size-6 publication-authors" style="margin-top:0.5rem; color:#D2C5B2;">
           <sup>1</sup>Chung-Ang University, Republic of Korea<br>
-          <small style="color:#9999bb;">
+          <small style="color:#96aaa6;">
             <sup>†</sup>Derived from his Master's thesis at CAU; now with Smilegate &nbsp;·&nbsp;
             <sup>*</sup>Corresponding Author
           </small>
         </div>
 
-        <div style="margin-top:1rem;">
-          <span class="publication-venue">SIGGRAPH 2026 Posters</span>
+        <div style="margin-top:1.2rem;">
+          <a href="https://s2026.siggraph.org/" target="_blank">
+            <img src="static/images/siggraph_logo.png"
+                 alt="SIGGRAPH 2026 Los Angeles"
+                 style="height:58px; border-radius:6px;">
+          </a>
+          <p style="color:#96aaa6; font-size:0.78rem; margin-top:0.4rem; letter-spacing:0.06em; text-transform:uppercase;">Posters</p>
         </div>
 
         <div class="publication-links" style="margin-top:1rem;">
@@ -148,7 +153,7 @@
           </span>
         </div>
 
-        <p style="color:#9999bb; font-size:0.85rem; margin-top:0.7rem;">
+        <p style="color:#96aaa6; font-size:0.85rem; margin-top:0.7rem;">
           July 19–23, 2026 &nbsp;·&nbsp; ACM SIGGRAPH 2026 Posters &nbsp;·&nbsp; Los Angeles, CA, USA
         </p>
 
@@ -347,43 +352,25 @@
         <h2 class="title is-3 accent-line" id="viewer">Interactive 3D Model Viewer</h2>
       </div>
 
-      <p class="ts-body">
-        Drag to rotate &nbsp;·&nbsp; Scroll to zoom &nbsp;·&nbsp; Auto-rotate enabled<br>
-        <em style="font-size:0.82rem; color:#55557a;">
-          ※ Add GLB files to
-          <code style="background:#0f0f1a; padding:2px 6px; border-radius:3px; color:#e8a838;">static/3d_asset/</code>
-          and update the
-          <code style="background:#0f0f1a; padding:2px 6px; border-radius:3px; color:#e8a838;">src</code>
-          attribute of each viewer.
-        </em>
+      <p class="ts-body" style="text-align:center !important; color:#96aaa6;">
+        Interactive 3D assets will be available upon paper release.
       </p>
 
       <!-- Row 1: Colorful Anamorphic Art -->
-      <h3 class="title is-5 viewer-subheading">
-        Colorful Anamorphic Art
-      </h3>
+      <h3 class="title is-5 viewer-subheading">Colorful Anamorphic Art</h3>
       <div class="columns">
         <div class="column viewer-card">
-          <model-viewer src="static/3d_asset/texshadow_anamorphic_01.glb"
-            camera-controls touch-action="pan-y" auto-rotate
-            shadow-intensity="1.2" environment-image="neutral"
-            alt="Tex-Shadow anamorphic output 01"></model-viewer>
+          <div class="viewer-placeholder"></div>
           <p class="viewer-label">Example 01 — 2-View Input</p>
           <p class="viewer-sublabel">Front: colorful texture &nbsp;|&nbsp; Rear: projected shadow</p>
         </div>
         <div class="column viewer-card">
-          <model-viewer src="static/3d_asset/texshadow_anamorphic_02.glb"
-            camera-controls touch-action="pan-y" auto-rotate
-            shadow-intensity="1.2" environment-image="neutral"
-            alt="Tex-Shadow anamorphic output 02"></model-viewer>
+          <div class="viewer-placeholder"></div>
           <p class="viewer-label">Example 02 — 2-View Input</p>
           <p class="viewer-sublabel">Front: colorful texture &nbsp;|&nbsp; Rear: projected shadow</p>
         </div>
         <div class="column viewer-card">
-          <model-viewer src="static/3d_asset/texshadow_anamorphic_03.glb"
-            camera-controls touch-action="pan-y" auto-rotate
-            shadow-intensity="1.2" environment-image="neutral"
-            alt="Tex-Shadow anamorphic output 03"></model-viewer>
+          <div class="viewer-placeholder"></div>
           <p class="viewer-label">Example 03 — 3-View Input</p>
           <p class="viewer-sublabel">Front: colorful texture &nbsp;|&nbsp; Rear: projected shadow</p>
         </div>
@@ -392,31 +379,20 @@
       <div class="spacer" style="margin-top:1.6rem; margin-bottom:1.6rem;"></div>
 
       <!-- Row 2: Light-Projected Shadow Art -->
-      <h3 class="title is-5 viewer-subheading">
-        Light-Projected Shadow Art
-      </h3>
+      <h3 class="title is-5 viewer-subheading">Light-Projected Shadow Art</h3>
       <div class="columns">
         <div class="column viewer-card">
-          <model-viewer src="static/3d_asset/texshadow_shadow_01.glb"
-            camera-controls touch-action="pan-y" auto-rotate
-            shadow-intensity="2.0" environment-image="neutral"
-            alt="Tex-Shadow shadow art output 01"></model-viewer>
+          <div class="viewer-placeholder"></div>
           <p class="viewer-label">Shadow Art — 2-View Input</p>
           <p class="viewer-sublabel">Silhouette-preserving 3D sculpture</p>
         </div>
         <div class="column viewer-card">
-          <model-viewer src="static/3d_asset/texshadow_shadow_02.glb"
-            camera-controls touch-action="pan-y" auto-rotate
-            shadow-intensity="2.0" environment-image="neutral"
-            alt="Tex-Shadow shadow art output 02"></model-viewer>
+          <div class="viewer-placeholder"></div>
           <p class="viewer-label">Shadow Art — 3-View Input</p>
           <p class="viewer-sublabel">Silhouette-preserving 3D sculpture</p>
         </div>
         <div class="column viewer-card">
-          <model-viewer src="static/3d_asset/texshadow_voxel_01.glb"
-            camera-controls touch-action="pan-y" auto-rotate
-            shadow-intensity="1.5" environment-image="neutral"
-            alt="Tex-Shadow voxelized output"></model-viewer>
+          <div class="viewer-placeholder"></div>
           <p class="viewer-label">Voxelized Output</p>
           <p class="viewer-sublabel">Downstream: physical brick fabrication</p>
         </div>
@@ -492,23 +468,23 @@
 <!-- ============================================================
      Footer
      ============================================================ -->
-<footer class="footer" style="background-color:#1a1a2e;">
+<footer class="footer" style="background-color:#2A4249;">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content has-text-centered">
-          <p style="color:#9999bb; font-size:0.85rem;">
+          <p style="color:#96aaa6; font-size:0.85rem;">
             This page was built using the
-            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" style="color:#e8a838;">Academic Project Page Template</a>
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" style="color:#E6E2D5;">Academic Project Page Template</a>
             adopted from the
-            <a href="https://nerfies.github.io" target="_blank" style="color:#e8a838;">Nerfies</a>
+            <a href="https://nerfies.github.io" target="_blank" style="color:#E6E2D5;">Nerfies</a>
             project page.
             Licensed under
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" style="color:#e8a838;">CC BY-SA 4.0</a>.
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" style="color:#E6E2D5;">CC BY-SA 4.0</a>.
           </p>
           <p style="margin-top:0.8rem;">
             <a href="https://mapmyvisitors.com/web/1c4pz" title="Visit tracker">
-              <img src="https://mapmyvisitors.com/map.png?cl=ffffff&w=300&t=tt&d=f92cSsPF66ZD66ZArvDFbhP1wjdBHj5hpC1A0s8tEZ4&co=1a1a2e&ct=ffffff">
+              <img src="https://mapmyvisitors.com/map.png?cl=ffffff&w=300&t=tt&d=f92cSsPF66ZD66ZArvDFbhP1wjdBHj5hpC1A0s8tEZ4&co=2a4249&ct=ffffff">
             </a>
           </p>
         </div>

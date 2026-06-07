@@ -5,6 +5,7 @@
 /* --- Base -------------------------------------------------- */
 body {
   background-color: #fafaf8;
+  font-family: 'DM Sans', 'Noto Sans', sans-serif;
 }
 
 a             { color: #c47a19; text-decoration: none; }
@@ -39,18 +40,33 @@ a:hover       { color: #00e1ff; text-decoration: none; }
   color: #ffffff;
 }
 
+.navbar-dropdown .columns {
+  margin: 0;
+}
+.navbar-dropdown .column {
+  padding: 0;
+}
+.navbar-dropdown .columns .navbar-item {
+  background-color: #EDE8DF;
+  color: #2A4249 !important;
+}
+.navbar-dropdown .columns a.navbar-item:hover {
+  background-color: #D2C5B2;
+  color: #2A4249 !important;
+}
+
 /* ============================================================
    Tex-Shadow Gallery Theme
    ============================================================ */
 :root {
-  --ts-ink:      #1a1a2e;
-  --ts-ink2:     #0f0f1a;
-  --ts-amber:    #e8a838;
-  --ts-amber2:   #b87d1a;
-  --ts-cream:    #fafaf8;
-  --ts-paper:    #f2efe9;
-  --ts-charcoal: #1d1d2c;
-  --ts-muted:    #9999bb;
+  --ts-ink:      #2A4249;   /* --brand-color */
+  --ts-ink2:     #1a2c32;   /* deeper — bibtex, model-viewer bg */
+  --ts-amber:    #E6E2D5;   /* --primary-color light */
+  --ts-amber2:   #978d7f;   /* darker — hover */
+  --ts-cream:    #F1EFE3;   /* --secondary-color */
+  --ts-paper:    #E6E2D5;   /* between secondary & primary */
+  --ts-charcoal: #2A4249;   /* --fc */
+  --ts-muted:    #96aaa6;   /* muted teal-grey */
 }
 
 /* --- Section backgrounds ------------------------------------ */
@@ -58,7 +74,76 @@ a:hover       { color: #00e1ff; text-decoration: none; }
 .theme-cream { background-color: var(--ts-cream) !important; }
 .theme-paper { background-color: var(--ts-paper) !important; }
 
-/* --- Title colors ------------------------------------------ */
+/* --- Neon flicker (T, e, x) -------------------------------- */
+@keyframes neon-T {
+  0%,17.9%,20.1%,21.9%,100% { color: inherit; text-shadow: none; }
+  18%,20%,22%                { color: #ff2d78;
+    text-shadow: 0 0 10px #ff2d78, 0 0 22px #ff2d78, 0 0 42px #ff2d7888; }
+}
+@keyframes neon-e {
+  0%,
+  12.9%,14.1%,15.9%,17.1%,
+  31.9%,33.1%,
+  58.9%,60.1%,61.9%,63.1%,64.9%,
+  100% { color: inherit; text-shadow: none; }
+  13%,14%,16%,17%,
+  32%,33%,
+  59%,60%,62%,63%,65% { color: #1D90A3;
+    text-shadow: 0 0 10px #1D90A3, 0 0 22px #1D90A3, 0 0 42px #1D90A388; }
+}
+@keyframes neon-x {
+  /* 더 지지직거리는 느낌 — 짧게 3번 */
+  0%,54.9%,56.1%,57.9%,59.1%,61.9%,100% { color: inherit; text-shadow: none; }
+  55%,56%,58%,59%,62%                    { color: #ffd700;
+    text-shadow: 0 0 10px #ffd700, 0 0 22px #ffd700, 0 0 42px #ffd70088; }
+}
+
+/* 소수 주기 → 절대 싱크 안 맞음 → 랜덤처럼 느껴짐 */
+.neon-T { display: inline-block; animation: neon-T 4.7s steps(1, end) infinite; }
+.neon-e { display: inline-block; animation: neon-e 7.3s steps(1, end) infinite 1.1s; }
+.neon-x { display: inline-block; animation: neon-x 6.1s steps(1, end) infinite 2.8s; }
+
+/* --- Shadow title animation -------------------------------- */
+@keyframes shadow-cast {
+  0% {
+    text-shadow: none;
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.05, 1); /* ~0.1s 스냅 */
+  }
+  4% {
+    text-shadow:
+      1px  -8px   0px  rgba(210, 197, 178, 0.72),
+      2px  -18px  4px  rgba(210, 197, 178, 0.52),
+      4px  -32px  12px rgba(210, 197, 178, 0.33),
+      7px  -52px  26px rgba(210, 197, 178, 0.18),
+      12px -76px  46px rgba(210, 197, 178, 0.09),
+      19px -106px 72px rgba(210, 197, 178, 0.04);
+    animation-timing-function: linear; /* 머무름 */
+  }
+  93% {
+    text-shadow:
+      1px  -8px   0px  rgba(210, 197, 178, 0.72),
+      2px  -18px  4px  rgba(210, 197, 178, 0.52),
+      4px  -32px  12px rgba(210, 197, 178, 0.33),
+      7px  -52px  26px rgba(210, 197, 178, 0.18),
+      12px -76px  46px rgba(210, 197, 178, 0.09),
+      19px -106px 72px rgba(210, 197, 178, 0.04);
+    animation-timing-function: cubic-bezier(0.95, 0.0, 1.0, 1.0); /* ~0.1s 스냅 */
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.shadow-animate {
+  display: inline-block;
+  animation: shadow-cast 2.8s linear infinite;
+}
+
+/* --- Title font & colors ----------------------------------- */
+.title, .publication-title {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
 .theme-ink .title {
   color: #ffffff !important;
 }
@@ -96,13 +181,16 @@ a:hover       { color: #00e1ff; text-decoration: none; }
 /* --- Publication venue badge -------------------------------- */
 .publication-venue {
   display: inline-block;
-  background: var(--ts-amber);
-  color: var(--ts-ink) !important;
-  padding: 4px 14px;
-  border-radius: 4px;
-  font-weight: bold;
-  margin-top: 8px;
-  letter-spacing: 0.03em;
+  background: rgba(91, 141, 184, 0.18);
+  color: #a8d0ea !important;
+  border: 1px solid rgba(91, 141, 184, 0.45);
+  padding: 5px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 /* --- Section heading accent underline ----------------------- */
@@ -117,6 +205,10 @@ a:hover       { color: #00e1ff; text-decoration: none; }
   background: var(--ts-amber);
   margin: 8px auto 0;
   border-radius: 2px;
+}
+.theme-cream .accent-line::after,
+.theme-paper .accent-line::after {
+  background: #1D90A3;
 }
 
 /* --- Spacer override for light sections -------------------- */
@@ -136,6 +228,24 @@ model-viewer {
 
 .viewer-card {
   padding: 0 8px;
+}
+
+.viewer-placeholder {
+  width: 100%;
+  height: 340px;
+  background-color: var(--ts-ink2);
+  border-radius: 8px;
+  border: 1px dashed #55686e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #55686e;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.viewer-placeholder::after {
+  content: 'Coming Soon';
 }
 
 .viewer-subheading {
@@ -179,8 +289,11 @@ model-viewer {
 }
 
 /* --- Author links on dark hero ----------------------------- */
+.theme-ink .publication-authors {
+  color: #D2C5B2;
+}
 .theme-ink .publication-authors a {
-  color: #ffd580;
+  color: #D2C5B2;
 }
 .theme-ink .publication-authors a:hover {
   color: var(--ts-amber);
