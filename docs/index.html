@@ -9,19 +9,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tex-Shadow</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" href="data:,">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Google+Sans|Noto+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/app.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
@@ -34,6 +33,18 @@
 <!-- ============================================================
      Navbar
      ============================================================ -->
+<nav id="side-nav" class="on-dark" aria-label="Page sections">
+  <a href="#tldr"       class="side-nav-item" data-label="TL;DR"></a>
+  <a href="#teaser"     class="side-nav-item" data-label="Teaser"></a>
+  <a href="#poster"     class="side-nav-item" data-label="Poster"></a>
+  <a href="#method"     class="side-nav-item" data-label="Method Overview"></a>
+  <a href="#comparison" class="side-nav-item" data-label="Comparison"></a>
+  <a href="#results"    class="side-nav-item" data-label="Results"></a>
+  <a href="#viewer"     class="side-nav-item" data-label="3D Viewer"></a>
+  <a href="#bibtex"     class="side-nav-item" data-label="BibTeX"></a>
+  <a href="#references" class="side-nav-item" data-label="References"></a>
+</nav>
+
 <nav class="navbar is-black" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -44,59 +55,72 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://github.com/gh-BumsooKim">
+      <a class="navbar-item" href="https://bumsookim00.com" target="_blank">
         <span class="icon"><i class="fas fa-home"></i></span>
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">More Research about Bumsoo Kim</a>
-        <div class="navbar-dropdown" style="left:50%; margin-left:-350px; min-width:700px">
+        <div class="navbar-dropdown mega-dropdown">
+          <div class="mega-inner">
+          <div class="mega-grid">
 
-          <span class="navbar-item" style="font-weight:bold; background:#1D90A3; color:#F1EFE3;">Non-photorealistic (NPR) Domain</span>
-          <div class="container is-max-desktop"><div class="columns is-centered">
-            <div class="column" style="min-width:300px;">
-              <a class="navbar-item" href="https://gh-bumsookim.github.io/Minecraft-ify/">&emsp;Minecraft-ify</a>
-              <a class="navbar-item" href="https://gh-bumsookim.github.io/ToonAging/">&emsp;ToonAging</a>
-              <a class="navbar-item" href="https://gh-bumsookim.github.io/Cartoon-Hallucinations-Detection/">&emsp;Cartoon Hallucination Detection</a>
-              <span class="navbar-item" style="font-weight:bold;">&emsp;Tex-Shadow (Here)</span>
+            <div class="mega-col">
+              <div class="mega-topic">3D Data &amp; Recon</div>
+              <a class="mega-paper" href="https://arxiv.org/abs/2502.03966" target="_blank">
+                <span class="mega-venue mega-venue-top">AAAI:W'25, Oral &nbsp;·&nbsp; <span class="mega-author mega-author-first">co-1st authored</span></span>
+                <span class="mega-title">MultiFloodSynth</span>
+              </a>
+              <span class="mega-paper">
+                <span class="mega-venue">MS Thesis'26 &nbsp;·&nbsp; <span class="mega-author mega-author-first">1st authored</span></span>
+                <span class="mega-title">Learning Pose-to-Semantic</span>
+              </span>
+              <span class="mega-paper mega-current">
+                <span class="mega-venue mega-venue-top">SIGGRAPH'26 Posters &nbsp;·&nbsp; <span class="mega-author mega-author-first">1st authored ★</span></span>
+                <span class="mega-title">Tex-Shadow</span>
+              </span>
             </div>
-            <div class="column" style="min-width:200px;">
-              <span class="navbar-item">NeurIPS:W'23, Oral</span>
-              <span class="navbar-item">CVPR:W'24</span>
-              <span class="navbar-item">WACV'25</span>
-              <span class="navbar-item">SIGGRAPH'26 Poster</span>
-            </div>
-            <div class="column" style="min-width:150px;">
-              <span class="navbar-item"><em>1st authored</em></span>
-              <span class="navbar-item"><em>1st authored</em></span>
-              <span class="navbar-item"><em>Co-1st authored</em></span>
-              <span class="navbar-item"><em>1st authored</em></span>
-            </div>
-          </div></div>
 
-          <span class="navbar-item" style="font-weight:bold; background:#55686e; color:#F1EFE3;">Photorealistic (PR) Domain</span>
-          <div class="container is-max-desktop"><div class="columns is-centered">
-            <div class="column" style="min-width:300px;">
-              <a class="navbar-item" href="https://video-reaging.github.io/">&emsp;Video Face Re-Aging</a>
-              <a class="navbar-item" href="https://arxiv.org/abs/2502.03966">&emsp;MultiFloodSynth</a>
-              <a class="navbar-item" href="https://gh-bumsookim.github.io/VideoTimeTravel/">&emsp;VideoTimeTravel</a>
-              <a class="navbar-item" href="https://gh-bumsookim.github.io/SoundsThatShape/">&emsp;SoundsThatShape</a>
+            <div class="mega-col">
+              <div class="mega-topic">Face &amp; Video</div>
+              <a class="mega-paper" href="https://video-reaging.github.io/" target="_blank">
+                <span class="mega-venue">arXiv'23 &nbsp;·&nbsp; <span class="mega-author">co-authored</span></span>
+                <span class="mega-title">Video Face Re-Aging</span>
+              </a>
+              <a class="mega-paper" href="https://gh-bumsookim.github.io/ToonAging/" target="_blank">
+                <span class="mega-venue mega-venue-top">CVPR:W'24 &nbsp;·&nbsp; <span class="mega-author mega-author-first">1st authored</span></span>
+                <span class="mega-title">ToonAging</span>
+              </a>
+              <a class="mega-paper" href="https://gh-bumsookim.github.io/VideoTimeTravel/" target="_blank">
+                <span class="mega-venue">Visual Computer'26 &nbsp;·&nbsp; <span class="mega-author mega-author-first">1st authored</span></span>
+                <span class="mega-title">VideoTimeTravel</span>
+              </a>
             </div>
-            <div class="column" style="min-width:200px;">
-              <span class="navbar-item">preprinted</span>
-              <span class="navbar-item">AAAI:W'25, Oral</span>
-              <span class="navbar-item">Visual Computer'26</span>
-              <span class="navbar-item">ICASSP'26</span>
-            </div>
-            <div class="column" style="min-width:150px;">
-              <span class="navbar-item"><em>Co-authored</em></span>
-              <span class="navbar-item"><em>Co-1st authored</em></span>
-              <span class="navbar-item"><em>1st authored</em></span>
-              <span class="navbar-item"><em>1st authored</em></span>
-            </div>
-          </div></div>
 
-        </div>
+            <div class="mega-col">
+              <div class="mega-topic">Sound</div>
+              <a class="mega-paper" href="https://gh-bumsookim.github.io/SoundsThatShape/" target="_blank">
+                <span class="mega-venue mega-venue-top">ICASSP'26 &nbsp;·&nbsp; <span class="mega-author mega-author-first">1st authored</span></span>
+                <span class="mega-title">SoundsThatShape</span>
+              </a>
+            </div>
+ 
+            <div class="mega-col">
+              <div class="mega-topic">2D &amp; Gaming</div>
+              <a class="mega-paper" href="https://gh-bumsookim.github.io/Minecraft-ify/" target="_blank">
+                <span class="mega-venue mega-venue-top">NeurIPS:W'23, Oral &nbsp;·&nbsp; <span class="mega-author mega-author-first">1st authored</span></span>
+                <span class="mega-title">Minecraft-ify</span>
+              </a>
+              <a class="mega-paper" href="https://gh-bumsookim.github.io/Cartoon-Hallucinations-Detection/" target="_blank">
+                <span class="mega-venue mega-venue-top">WACV'25 &nbsp;·&nbsp; <span class="mega-author mega-author-first">co-1st authored</span></span>
+                <span class="mega-title">Cartoon Hallucination Detection</span>
+              </a>
+            </div>
+
+          </div><!-- .mega-grid -->
+          </div><!-- .mega-inner -->
+
+        </div><!-- .navbar-dropdown -->
       </div>
     </div>
   </div>
@@ -111,7 +135,7 @@
       <div class="has-text-centered">
 
         <h1 class="title is-2 publication-title">
-          <span class="neon-T">T</span><span class="neon-e">e</span><span class="neon-x">x</span>-<span class="shadow-animate">Shadow</span>: Synthesizing Textured 3D Shadow Art<br>via 3D-Aware Diffusion Prior
+          <span class="neon-T">Tex</span>-<span class="shadow-animate">Shadow</span>: Synthesizing Textured 3D Shadow Art<br>via 3D-Aware Diffusion Prior
         </h1>
 
         <div class="is-size-5 publication-authors" style="margin-top:1rem;">
@@ -135,14 +159,14 @@
                  alt="SIGGRAPH 2026 Los Angeles"
                  style="height:58px; border-radius:6px;">
           </a>
-          <p style="color:#96aaa6; font-size:0.78rem; margin-top:0.4rem; letter-spacing:0.06em; text-transform:uppercase;">Posters</p>
+          <p style="color:#96aaa6; font-size:0.78rem; margin-top:0.4rem; letter-spacing:0.06em; text-transform:uppercase;">Posters Program</p>
         </div>
 
         <div class="publication-links" style="margin-top:1rem;">
           <span class="link-block">
             <a href="#" target="_blank" class="external-link button is-normal is-rounded is-outlined ts-btn">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Paper (ACM, Soon)</span>
+              <span>Paper (Soon)</span>
             </a>
           </span>
           <span class="link-block">

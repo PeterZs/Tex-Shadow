@@ -63,7 +63,7 @@ The resulting mesh is exported to diverse representations: triangular mesh, voxe
 This project builds upon the following excellent open-source works:
 
 - [**DreamGaussian**](https://github.com/dreamgaussian/dreamgaussian) — mesh extraction and texture refinement pipeline
-- [**iFusion**](https://github.com/jiawei-ren/iFusion) — Zero123-based diffusion guidance for sparse-view 3D reconstruction
+- [**iFusion**](https://github.com/chinhsuanwu/ifusion) — Zero123-based diffusion guidance for sparse-view 3D reconstruction
 
 ## Citation
 
