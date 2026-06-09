@@ -148,7 +148,7 @@ a:hover       { color: #00e1ff; text-decoration: none; }
 .mega-inner {
   width: 56vw;
   margin: 0 auto;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   border: 1px solid #c8c0b0;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.14);
   background: #EDE8DF;
